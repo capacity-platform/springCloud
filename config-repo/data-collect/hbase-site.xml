@@ -96,7 +96,7 @@
   </property>
   <property>
     <name>hbase.zookeeper.quorum</name>
-    <value>beta-test-v5-hbase05.novalocal,beta-test-v5-hbase03.novalocal,beta-test-v5-hbase04.novalocal</value>
+    <value>alpha-cdn-hadoop02.novalocal,alpha-cdn-hadoop01.novalocal,alpha-cdn-hadoop03.novalocal</value>
   </property>
   <property>
     <name>hbase.zookeeper.property.clientPort</name>

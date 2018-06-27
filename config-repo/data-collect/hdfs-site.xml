@@ -16,43 +16,43 @@
   </property>
   <property>
     <name>ha.zookeeper.quorum</name>
-    <value>beta-test-v5-hbase03.novalocal:2181,beta-test-v5-hbase04.novalocal:2181,beta-test-v5-hbase05.novalocal:2181</value>
+    <value>alpha-cdn-hadoop01.novalocal:2181,alpha-cdn-hadoop02.novalocal:2181,alpha-cdn-hadoop03.novalocal:2181</value>
   </property>
   <property>
     <name>dfs.ha.namenodes.nameservice1</name>
-    <value>namenode54,namenode77</value>
+    <value>namenode73,namenode90</value>
   </property>
   <property>
-    <name>dfs.namenode.rpc-address.nameservice1.namenode54</name>
-    <value>beta-test-v5-hbase02.novalocal:8020</value>
+    <name>dfs.namenode.rpc-address.nameservice1.namenode73</name>
+    <value>alpha-cdn-hadoop02.novalocal:8020</value>
   </property>
   <property>
-    <name>dfs.namenode.servicerpc-address.nameservice1.namenode54</name>
-    <value>beta-test-v5-hbase02.novalocal:8022</value>
+    <name>dfs.namenode.servicerpc-address.nameservice1.namenode73</name>
+    <value>alpha-cdn-hadoop02.novalocal:8022</value>
   </property>
   <property>
-    <name>dfs.namenode.http-address.nameservice1.namenode54</name>
-    <value>beta-test-v5-hbase02.novalocal:50070</value>
+    <name>dfs.namenode.http-address.nameservice1.namenode73</name>
+    <value>alpha-cdn-hadoop02.novalocal:50070</value>
   </property>
   <property>
-    <name>dfs.namenode.https-address.nameservice1.namenode54</name>
-    <value>beta-test-v5-hbase02.novalocal:50470</value>
+    <name>dfs.namenode.https-address.nameservice1.namenode73</name>
+    <value>alpha-cdn-hadoop02.novalocal:50470</value>
   </property>
   <property>
-    <name>dfs.namenode.rpc-address.nameservice1.namenode77</name>
-    <value>beta-test-v5-hbase04.novalocal:8020</value>
+    <name>dfs.namenode.rpc-address.nameservice1.namenode90</name>
+    <value>alpha-cdn-hadoop03.novalocal:8020</value>
   </property>
   <property>
-    <name>dfs.namenode.servicerpc-address.nameservice1.namenode77</name>
-    <value>beta-test-v5-hbase04.novalocal:8022</value>
+    <name>dfs.namenode.servicerpc-address.nameservice1.namenode90</name>
+    <value>alpha-cdn-hadoop03.novalocal:8022</value>
   </property>
   <property>
-    <name>dfs.namenode.http-address.nameservice1.namenode77</name>
-    <value>beta-test-v5-hbase04.novalocal:50070</value>
+    <name>dfs.namenode.http-address.nameservice1.namenode90</name>
+    <value>alpha-cdn-hadoop03.novalocal:50070</value>
   </property>
   <property>
-    <name>dfs.namenode.https-address.nameservice1.namenode77</name>
-    <value>beta-test-v5-hbase04.novalocal:50470</value>
+    <name>dfs.namenode.https-address.nameservice1.namenode90</name>
+    <value>alpha-cdn-hadoop03.novalocal:50470</value>
   </property>
   <property>
     <name>dfs.replication</name>
