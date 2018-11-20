@@ -1,0 +1,96 @@
+########### http server  #############
+threadPool.corePoolSize=20
+threadPool.maximumPoolSize=30
+threadPool.keepAliveSecond=360
+http.port=8980
+http.maxConnection=100
+http.authUrl=/awifi/mqtt/auth
+http.aclUrl=/awifi/mqtt/acl
+http.superUserUrl=/awifi/mqtt/superuser
+
+############## kafka ################
+#kafka.brokerlist=192.168.210.100:9091, 192.168.210.100:9092,192.168.210.100:9093
+kafka.brokerlist=192.168.212.71:9092,192.168.212.72:9092
+
+#---------------命令下发响应主题--------------
+kafka.topic.response=dbus-device-result
+#---------------数据上报主题--------------
+kafka.topic.status=dbus-device-status  
+#---------------设备告警主题--------------
+kafka.topic.warning=dbus-device-warning
+#---------------设备心跳--------------
+kafka.topic.heartbeat=dbus-device-heartbeat
+#---------------查询数据缓存--------------
+kafka.topic.resport=dbus-device-resport
+
+##############调试程序用的指令##########
+#---------localhost----
+#bin/kafka-console-consumer.sh --zookeeper localhost:2181,localhost:2182,localhost:2183  --topic dbus-device-heartbeat
+#bin/kafka-console-consumer.sh --zookeeper localhost:2181,localhost:2182,localhost:2183  --topic dbus-device-status
+#bin/kafka-console-consumer.sh --zookeeper localhost:2181,localhost:2182,localhost:2183 --topic dbus-device-warning
+
+#---------alpha--------
+#bin/kafka-console-consumer.sh --zookeeper 192.168.212.67:2181,192.168.212.71:2181,192.168.212.72:2181 --topic dbus-device-heartbeat
+#bin/kafka-console-consumer.sh --zookeeper 192.168.212.67:2181,192.168.212.71:2181,192.168.212.72:2181 --topic dbus-device-status
+#bin/kafka-console-consumer.sh --zookeeper 192.168.212.67:2181,192.168.212.71:2181,192.168.212.72:2181 --topic dbus-device-warning
+
+
+
+############## mqtt配置 ##############
+#断开之后尝试重连的次数
+mqtt.reconnect.time=10
+#每次重连间隔的时间,单位 s
+mqtt.reconnect.timeout=10
+#mqtt.connect.host=tcp://192.168.212.177:1884
+#mqtt.connect.host=tcp://127.0.0.1:8084
+#mqtt.connect.host=tcp://127.0.0.1:8084
+mqtt.connect.host=tcp://192.168.212.179:3010
+mqtt.connect.timeout=10
+mqtt.connect.username=admin
+mqtt.connect.pass=admin
+#mqtt.connect.username=
+#mqtt.connect.pass=
+mqtt.keepalive=45
+
+mqtt.tls.switch=false
+#如果为 空 的话,则使用本地的信任列表的 ca 证书验证服务器证书
+mqtt.tls.cacrt=/home/yhy/athena/code/devbus/trunk/devicebus-mqtt/src/main/resources/ca.crt
+#mqtt.tls.cacrt=
+
+##################主题相关的内容####################
+#---------------设备下发命令响应主题--------------
+mqtt.response.connect.clientId=response
+mqtt.response.topicfilter=/+/+/+/response
+mqtt.response.qos=0
+
+#---------------数据上报主题--------------
+mqtt.status.connect.clientId=status
+mqtt.status.topicfilter=/+/+/+/status
+mqtt.status.qos=0
+
+#---------------设备告警主题--------------
+mqtt.warning.connect.clientId=warning
+mqtt.warning.topicfilter=/+/+/+/warning
+mqtt.warning.qos=0
+###redis锁超时时间  秒
+redis.expireTime=5
+###########redis 集群###########
+############## redis ################
+redis.host2=192.168.212.85
+redis.port2=7001
+redis.host3=192.168.212.85
+redis.port3=7002
+redis.host4=192.168.212.85
+redis.port4=7003
+redis.host5=192.168.212.85
+redis.port5=7004
+redis.host6=192.168.212.85
+redis.port6=7005
+redis.host1=192.168.212.85 
+redis.port1=7006
+redis.cluster.maxRedirects=6
+redis.pool.minIdle=8
+redis.pool.maxIdle=300
+redis.pool.maxActive=600
+redis.pool.maxWait=3000
+zookeeper.address=192.168.41.44:2181,192.168.41.45:2181,192.168.41.46:2181,192.168.41.47:2181,192.168.41.48:2181
