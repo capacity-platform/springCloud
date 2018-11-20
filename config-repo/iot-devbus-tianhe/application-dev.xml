@@ -1,0 +1,46 @@
+########### http server ###########
+httpServer.ip=192.168.212.179
+httpServer.port=8000
+httpserver.maxConnection=100
+
+########### tcp server ###########
+tcpServer.port=7788
+
+########### spring ###########
+threadPool.corePoolSize=20
+threadPool.maximumPoolSize=30
+threadPool.keepAliveSecond=360
+
+########### idle time ###########
+idleStateHandler.readerIdleTime=0 
+idleStateHandler.writerIdleTime=0
+idleStateHandler.allIdleTime=2
+idleStateHandler.unit=MINUTES
+
+########### kafka producer ###########
+kafka.brokerlist=192.168.212.71:9092,192.168.212.72:9092
+kafka.topic.heartbeat=dbus-device-heartbeat
+kafka.topic.status=dbus-device-tianhelocationinfor
+kafka.topic.warning=dbus-device-warning
+
+########### zookeeper ###########
+zookeeper.address=192.168.41.44:2181,192.168.41.45:2181,192.168.41.46:2181,192.168.41.47:2181,192.168.41.48:2181
+
+###########redis 配置###########
+redis.cluster.maxRedirects=6
+redis.pool.maxIdle=300
+redis.pool.maxActive=600
+redis.pool.maxWait=3000
+
+redis.host1=192.168.212.85
+redis.port1=7000
+redis.host2=192.168.212.85
+redis.port2=7001
+redis.host3=192.168.212.85
+redis.port3=7002
+redis.host4=192.168.212.85
+redis.port4=7003
+redis.host5=192.168.212.85
+redis.port5=7004
+redis.host6=192.168.212.85
+redis.port6=7005
